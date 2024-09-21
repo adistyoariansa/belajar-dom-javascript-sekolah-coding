@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom javascript</title>
+    <style>
+        .merah {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar DOM JavaScript</h1>
+    <img src="elang.jpg" width="300" id="gambar"> <br><br>
+    
+    <input type="text" value="nama" id="input">
+
+    <script>
+        var img = document.getElementById('gambar');
+        img.width = 400;
+
+        img.setAttribute('class', 'merah');
+
+        var input = document.getElementById('input');
+        input.value = "nama lengkap";
+
+    </script>
+</body>
+</html>

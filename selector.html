@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>belajar dom javascript</h1>
+    <div id="box1"></div>
+
+    <div class="boxes"></div>
+    <div class="boxes"></div>
+    <div class="boxes"></div>
+
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+   
+    <script>
+        //1. memilih elemen html
+        
+        //selector
+        document.getElementById('box1').innerHTML = "sekolah coding";
+
+        var boxes = document.getElementsByClassName('boxes');
+        boxes[0].innerHTML = "versi terbaru";
+        boxes[1].innerHTML = "versi sebelumnya";
+        boxes[2].innerHTML = "versi terlama";
+
+        //bagian ke 2
+
+        var list = document.getElementsByTagName('li');
+        list[0].innerHTML = "php";
+        list[1].innerHTML = "sass";
+        list[2].innerHTML = "jquery";
+    </script>
+    
+</body>
+</html>

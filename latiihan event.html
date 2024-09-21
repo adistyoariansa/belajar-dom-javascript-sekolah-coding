@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom javascript</title>
+    <style>
+        .merah {
+            background: red;
+        }
+        .black{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body onload=" ">
+    <h1>Belajar DOM JavaScript</h1>
+    <img onclick="berubah()" src="elang 2.png" width="300" id="gambar" class="black"> <br><br>
+    
+    <input type="text" value="nama" id="input">
+    <input type="submit" id="submit">
+
+    namanya adalah <span id="p1"></span>
+
+    <script>
+        var img = document.getElementById('gambar');
+        img.width = 400;
+
+        //img.setAttribute('class', 'merah');
+
+        img.className += ' merah';
+
+        var input = document.getElementById('input');
+        input.value = "nama lengkap";
+
+        input.style.border='3px solid blue';
+        input.style.backgroundColor= 'yellow';
+
+        //----event----
+
+        function berubah() {
+            img.style.backgroundColor = 'yellow';
+       }
+        input.onclick = berubah;
+
+        function berubah2() {
+          input.style.backgroundColor = 'blue';
+       }
+
+       input.addEventListener('mouseenter', berubah2);
+
+       input.addEventListener('mouseleave', function(){
+        input.style.backgroundColor = 'red';
+       });
+
+       var submit = document.getElementById('submmit');
+       var span = document.getElementById('p1');
+
+       submit.onclick = function(){
+        var text = input.value;
+        span.innerHTML = text;
+       };
+    </script>
+</body>
+</html>
